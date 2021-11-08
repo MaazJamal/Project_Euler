@@ -7,6 +7,31 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
+"""
+the sum of multiple of a number is simply a series of addition of the same number. 
+For example if we take multiple of 3 up to a number k , we get:
+    3 + 6 + 9+ .... + n
+
+Where n is the quotient of the division k/3 
+This can be written as:
+    3 + (3+3) + (3+3+3)+ ....
+if we take 3 a common we get:
+    3( 1 + (1+1) + (1+1+1) + ...
+    3( 1 + 2 + 3 + ....
+Which turns our problem into a simple multiplication with the sum of the series:
+    1 + 2 + 3 + 4 + ... + n
+The parties sum of this divergent series is:
+    n(n+1)/2
+
+The sum of multiples of a number m until a number k is then simply:
+    m*(n*n+1)/2
+
+we can now find the sum of the multiples of two numbers and add them toether. 
+Using this method there will be duplicates at all points where both number have common multiples.
+The sum of the common multiple can be subtracted by taking the LCM of the numbers and findings its sum upto 1000.
+We now get correct answer.  
+"""
+
 
 no_3 =  999//3
 no_5 =  999//5
